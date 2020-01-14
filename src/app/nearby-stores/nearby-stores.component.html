@@ -1,0 +1,13 @@
+<div class="row" *ngFor='let medical of list'>
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">{{medical.name}}</span>
+              <p>Address: {{medical.address}}</p>
+              <p>Email: {{medical.email}}</p>
+              <p>Mobile : +91 {{medical.mobileNumber}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    

@@ -1,0 +1,55 @@
+<h4 class="display-4" class="center">Order Medicines</h4>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+
+    <!-- This is name section -->
+    <div class="form-group">
+            <input name="firstname" #firstname="ngModel" [(ngModel)]="service.formData.firstname" type="text" class="form-control" class="validate" placeholder="Enter your first name." required>
+            <label for="firstname">First Name</label>
+    </div>
+    
+    <div class="form-group">    
+    <input name="lastname" #lastname="ngModel" [(ngModel)]="service.formData.lastname" type="text" class="form-control" class="validate" placeholder="Enter your last name." required>
+          <label for="lastname">Last Name</label>
+    </div>
+
+    <!-- This is address section -->
+    <div class="form-group">
+            <input name="address" #address="ngModel" [(ngModel)]="service.formData.address" type="text" class="form-control" class="validate" placeholder="Enter your address" required>
+            <label for="address">Address</label>
+    </div>
+
+    <!-- This is email section -->
+    <div class="form-group">
+            <input name="email" #email="ngModel" [(ngModel)]="service.formData.email" type="text" class="form-control" class="validate" placeholder="Enter your Email" required>
+            <label for="email">Email</label>
+    </div>
+
+    <!-- This is medical_store section -->
+    <!-- <div class="form-group">
+        <label for="medical_store">Medical Stores</label>
+        <select name="medical_store" #medical_store="ngModel" [(ngModel)]="service.formData.medical_store" class="form-control" required>
+            <option *ngFor="let store of list" [value]="store.id">Name: {{store.name}} | Address: {{store.address}}</option>
+        </select>
+    </div> -->
+    
+    <!-- This is medicines section -->
+    <div class="form-group">
+        <input name="medical_store" #medical_store="ngModel" [(ngModel)]="service.formData.medical_store" type="text" class="validate" class="form-control" placeholder="Enter name of nearby medical store" required>
+        <label for="medicines">Medical Store</label>
+    </div>
+
+    <!-- This is medicines section -->
+    <div class="form-group">
+            <input name="medicines" #medicines="ngModel" [(ngModel)]="service.formData.medicines" type="text" class="validate" class="form-control" placeholder="Enter names of medicines" required>
+            <label for="medicines">Medicines</label>
+    </div>
+
+    <!-- This is the submit button -->
+    <div class="form-group">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>    
+    </div>
+    
+    <br>
+    <br>
+
+</form>
